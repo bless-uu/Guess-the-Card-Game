@@ -1,0 +1,33 @@
+import random
+import itertools
+
+score_1 = 0
+score_2 = 0
+score_3 = 0
+score_4 = 0
+score_5 = 0
+
+
+host = [1, 2, 3, 4 ,5]
+my = list(itertools.permutations([1, 2, 3, 4, 5]))
+
+for i in range(len(my)):
+    count = 0
+    for j in range(len(host)):
+        if host[j]==my[i][j]:
+            count += 1
+            if count == 1:
+                score_1 += 1
+            if count == 2:
+                score_2 += 1
+            if count == 3:
+                score_3 += 1
+            if count == 4:
+                score_4 += 1
+            if count == 5:
+                score_5 += 1
+print(score_1/120)
+print(score_2/120)
+print(score_3/120)
+print(score_4/120)
+print(score_5/120)
